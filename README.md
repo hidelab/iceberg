@@ -2,6 +2,8 @@
 
 Notes on iceberg, the Sheffield HPC facility.
 
+Improve these notes by [editing them on github](https://github.com/hidelab/iceberg) or [by submitting an issue](https://github.com/hidelab/iceberg/issues).
+
 ## Logging in
 
 To access iceberg you will need to SSH in.
