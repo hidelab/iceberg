@@ -34,3 +34,12 @@ To the top section of your job-script, add
 
     #$ -P hidelab
     #$ -q hidelab.q
+    
+## Iceberg Shared Storage
+
+We also have purchased additional storage that Hide Lab can use.
+It's available on iceberg in
+
+    /shared/hidelab2
+    
+(this is some sort of magic automount directory, so it doesn't appear in `ls` and so on until you explcitly `cd` to it or use it)
