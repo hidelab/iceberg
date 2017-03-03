@@ -41,6 +41,8 @@ otherwise it will run on the general queue)
 
 `qstat -u $USER` will tell you about the jobs that are either running or waiting to run.
 If a job has already finished, it won't appear in this list.
+
+`qtop` shows similar information in more detail and is quite fun.
     
 ## Iceberg Shared Storage
 
