@@ -23,17 +23,19 @@ There are many parameters.
 
 Hide Lab rent a node on iceberg which means that we get exclusive access to it.
 
-To run jobs on the hidelab node use `-P hidelab` and `-q hidelab.q` in the job parameters.
+To run jobs on the hidelab node use `-P hidelab`in the job parameters.
 
 You can either do this each time you submit a job:
 
-    qsub -P hidelab -q hidelab.q my-job-script
+    qsub -P hidelab my-job-script
 
 or you can put the parameters in the top section of the job script itself.
 To the top section of your job-script, add
 
     #$ -P hidelab
-    #$ -q hidelab.q
+    
+(using `-P` like this will cause the job to run on the hidelab node if it is available,
+otherwise it will run on the general queue)
     
 ## Iceberg Shared Storage
 
