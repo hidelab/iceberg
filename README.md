@@ -36,6 +36,11 @@ To the top section of your job-script, add
     
 (using `-P` like this will cause the job to run on the hidelab node if it is available,
 otherwise it will run on the general queue)
+
+## What jobs do I have?
+
+`qstat -u $USER` will tell you about the jobs that are either running or waiting to run.
+If a job has already finished, it won't appear in this list.
     
 ## Iceberg Shared Storage
 
