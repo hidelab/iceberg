@@ -44,7 +44,16 @@ If a job has already finished, it won't appear in this list.
 
 `qtop` shows similar information in more detail and is quite fun.
     
-## Iceberg Shared Storage
+## Iceberg Storage
+
+I have
+
+`/home/md1xdrj` 10 gigabytes
+
+`/data/md1xdrj` 100 gigabytes
+
+You will have similar directories using your username.
+
 
 We also have purchased additional storage that Hide Lab can use.
 It's available on iceberg in
