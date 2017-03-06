@@ -54,10 +54,11 @@ I have
 
 You will have similar directories using your username.
 
-
 We also have purchased additional storage that Hide Lab can use.
 It's available on iceberg in
 
     /shared/hidelab2
     
 (this is some sort of magic automount directory, so it doesn't appear in `ls` and so on until you explcitly `cd` to it or use it)
+
+More information about the difference sorts of storage is available on the [official iceberg filestore page](http://docs.hpc.shef.ac.uk/en/latest/iceberg/filestore.html).
