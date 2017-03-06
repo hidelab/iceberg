@@ -4,6 +4,9 @@ Notes on iceberg, the Sheffield HPC facility.
 
 Improve these notes by [editing them on github](https://github.com/hidelab/iceberg) or [by submitting an issue](https://github.com/hidelab/iceberg/issues).
 
+The official Research Computing Group documentation is http://docs.hpc.shef.ac.uk/en/latest/iceberg/.
+This document is intended to be more practical notes particularly guided towards our group's needs.
+
 ## Logging in
 
 To access iceberg you will need to SSH in.
