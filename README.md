@@ -17,6 +17,8 @@ From the command line:
 Don't use `md1xdrj`, that's my username; you'll have to use yours.
 Your username and password are the same one you use to access MUSE, unless you have changed it.
 
+(if you use `ssh` a lot, see [my notes about making it more convenient](ssh.md))
+
 ## Submitting jobs
 
 Use `qsub my-job-script` to submit a job.
