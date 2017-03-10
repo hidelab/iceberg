@@ -15,6 +15,12 @@ In this case, it's the `hidelab` project.
 
 `man project` may also be useful.
 
+## What is running on this node ?
+
+`qstat -q *@$(hostname).iceberg.shef.ac.uk`
+
+Note that you can replace `$(hostname)` with the name of any node to spy on that instead.
+
 ## How many queues are there ?
 
 `qconf -sql`
