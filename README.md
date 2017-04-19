@@ -22,7 +22,11 @@ Your username and password are the same one you use to access MUSE, unless you h
 ## Submitting jobs
 
 Use `qsub my-job-script` to submit a job.
-There are many parameters.
+There are many parameters (see `man qsub` for the ultimate source of truth).
+Iceberg's official documentation is here: http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/sge.html
+
+Parameters can be specified either on the `qsub` command line,
+or in the shell script itself on a line that begins `#$` (see example below).
 
 ## Submitting to the hidelab node
 
