@@ -9,7 +9,7 @@ This document is intended to be more practical notes particularly guided towards
 
 ## Logging in
 
-To access iceberg you will need to SSH in.
+To access `iceberg` you will need to SSH in.
 From the command line:
 
     ssh -X md1xdrj@iceberg.sheffield.ac.uk
@@ -18,6 +18,15 @@ Don't use `md1xdrj`, that's my username; you'll have to use yours.
 Your username and password are the same one you use to access MUSE, unless you have changed it.
 
 (if you use `ssh` a lot, see [my notes about making it more convenient](ssh.md))
+
+## ShARC
+
+ShARC is the HPC system introduced in 2017.
+You can use it by replacing `iceberg` with `sharc` when SSH'ing in:
+
+    ssh -X md1xdrj@sharc.sheffield.ac.uk
+    
+It's still a bit new.
 
 ## Submitting jobs
 
