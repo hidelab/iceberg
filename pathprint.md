@@ -3,7 +3,7 @@
 pathprint can be installed from bioconductor.
  
 GMAfunctions needs to be installed from Gabriel’s source code.
-They are in /data/md4ga/fingerprint/package.
+They are in `/data/md4ga/fingerprint/package`.
 
 They can be installed using R CMD INSTALL in terminal or install.packages in R.
 
