@@ -30,3 +30,7 @@ Note that you can replace `$(hostname)` with the name of any node to spy on that
 `qhost` lists all nodes.
 
 `qhost | awk '{print $2,$3}' | sort | uniq` shows all CPU architectures and CPU counts.
+
+You can force login to a particular node (presumably, only if available):
+
+    qrshx -q all.q@sharc-node004.shef.ac.uk
