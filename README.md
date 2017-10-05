@@ -61,6 +61,17 @@ otherwise it will run on the general queue)
 If a job has already finished, it won't appear in this list.
 
 `qtop` shows similar information in more detail and is quite fun.
+
+## What jobs are running on the hidelab node
+
+The node is actually a queue, and you can see what jobs are running, and waiting to run,
+like this:
+
+    qstat -q hidelab.q
+    
+The output of this command requires some interpretation.
+It's useful to know that `state` tells you whether something is running, `r`, or waiting, `qw`;
+and, `slots` is how many CPU cores have been requested.
     
 ## Iceberg Storage
 
