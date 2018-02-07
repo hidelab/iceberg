@@ -1,32 +1,29 @@
-# iceberg
+# HPC: sharc and iceberg
 
-Notes on iceberg, the Sheffield HPC facility.
+Notes on using the Sheffield High Performance Computing facility. `sharc` and `iceberg`.
 
 Improve these notes by [editing them on github](https://github.com/hidelab/iceberg) or [by submitting an issue](https://github.com/hidelab/iceberg/issues).
 
 The official Research Computing Group documentation is http://docs.hpc.shef.ac.uk/en/latest/iceberg/.
 This document is intended to be more practical notes particularly guided towards our group's needs.
 
+`sharc` is the name of the new (as of 2017) HPC facility, it is generally preferred (faster, more reliable, and so on).
+`iceberg` is the name of the old facility; it might still be useful to use as it may have more packages installed.
+
 ## Logging in
 
-To access `iceberg` you will need to SSH in.
+To access `sharc` (or `iceberg`) you will need to SSH in.
 From the command line:
 
-    ssh -X md1xdrj@iceberg.sheffield.ac.uk
+    ssh -X md1xdrj@sharc.sheffield.ac.uk
     
 Don't use `md1xdrj`, that's my username; you'll have to use yours.
 Your username and password are the same one you use to access MUSE, unless you have changed it.
 
-(if you use `ssh` a lot, see [my notes about making it more convenient](ssh.md))
+To use `iceberg`, replace `sharc.sheffield.ac.uk` with `iceberg.sheffield.ac.uk`.
 
-## ShARC
+(You can make this as short as `ssh sharc`, if you're okay with editing some `ssh` config files, see [my notes about making it more convenient](ssh.md))
 
-ShARC is the HPC system introduced in 2017.
-You can use it by replacing `iceberg` with `sharc` when SSH'ing in:
-
-    ssh -X md1xdrj@sharc.sheffield.ac.uk
-    
-It's still a bit new.
 
 ## Submitting jobs
 
@@ -37,35 +34,47 @@ Iceberg's official documentation is here: http://docs.hpc.shef.ac.uk/en/latest/h
 Parameters can be specified either on the `qsub` command line,
 or in the shell script itself on a line that begins `#$` (see example below).
 
-## Submitting to the hidelab node
+Parameters that you use repeatedly can be place in your `~/.sge_request` file.
+I recommend putting at least the following for that file:
 
-Hide Lab rent a node on iceberg which means that we get exclusive access to it.
+    -M your.email@sheffield.ac.uk
+    -m e
 
-To run jobs on the hidelab node use `-P hidelab`in the job parameters.
+Other options are probably best set in your script itself.
 
+## Submitting to our queue
+
+On `sharc` Hide Lab have access to the RSE queue (which is a pool of nodes also shared with other groups).
+Put `-P rse` in the job parameters.
 You can either do this each time you submit a job:
 
-    qsub -P hidelab my-job-script
+    qsub -P rse my-job-script
 
 or you can put the parameters in the top section of the job script itself.
 To the top section of your job-script, add
 
-    #$ -P hidelab
+    #$ -P rse
     
-(using `-P` like this will cause the job to run on the hidelab node if it is available,
+(using `-P` like this will cause the job to run on the rse queue if it is available,
 otherwise it will run on the general queue)
+
+On `iceberg` Hide Lab rents a node, which means that we get exclusive access to it.
+
+To run jobs on the hidelab node use `-P hidelab`in the job parameters.
+
+It's `-P hidelab` on `iceberg` and `-P rse` on `sharc`. Sorry.
 
 ## What jobs do I have?
 
-`qstat -u $USER` will tell you about the jobs that are either running or waiting to run.
+`qstat` (on `iceberg`:`qstat -u $USER`) will tell you about the jobs that are either running or waiting to run.
 If a job has already finished, it won't appear in this list.
+This list also includes interactive shell sessions (such as started with `qrshx`), they are jobs that are attached to an interactive terminal.
 
-`qtop` shows similar information in more detail and is quite fun.
+`qtop` shows similar information in more detail and is quite fun (but it does not work on `sharc`).
 
-## What jobs are running on the hidelab node
+## What jobs are running on the RSE nodes
 
-The node is actually a queue, and you can see what jobs are running, and waiting to run,
-like this:
+You can inspect a queue (`rse.q` in the _queue_ for the `rse` _project_, and `hidelab.q` is the queue for the `hidelab` project) like this:
 
     qstat -q hidelab.q
     
@@ -88,6 +97,16 @@ It's available on iceberg in
 
     /shared/hidelab2
     
-(this is some sort of magic automount directory, so it doesn't appear in `ls` and so on until you explcitly `cd` to it or use it)
+This is some sort of magic automount directory, so it doesn't appear in `ls` and so on until you explcitly `cd` to it or use it.
 
 More information about the difference sorts of storage is available on the [official iceberg filestore page](http://docs.hpc.shef.ac.uk/en/latest/iceberg/filestore.html).
+
+You can see if you're using lots of storage with:
+
+    df -h ~
+    df -h /data/md1xdrj
+    df -h /shared/hidelab2
+    
+or similar.
+
+## end
