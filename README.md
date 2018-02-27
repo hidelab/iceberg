@@ -93,7 +93,7 @@ I have
 You will have similar directories using your username.
 
 We also have purchased additional storage that Hide Lab can use.
-It's available on iceberg in
+It's available on `sharc` (and `iceberg`) in
 
     /shared/hidelab2
     
