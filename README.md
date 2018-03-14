@@ -76,9 +76,18 @@ This list also includes interactive shell sessions (such as started with `qrshx`
 
 You can inspect a queue (`rse.q` in the _queue_ for the `rse` _project_, and `hidelab.q` is the queue for the `hidelab` project) like this:
 
-    qstat -q hidelab.q
+On `sharc`
+
+    qstat -s r -q rse.q -u \*
+
+On `iceberg`
+
+    qstat -s r -q hidelab.q
     
-The output of this command requires some interpretation.
+In the above commands `-s r` means we see only running jobs.
+If you want to see other jobs (for example, you can see the priority of your own jobs that are waiting),
+you can remove the `-s r` part.
+
 It's useful to know that `state` tells you whether something is running, `r`, or waiting, `qw`;
 and, `slots` is how many CPU cores have been requested.
     
