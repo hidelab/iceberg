@@ -58,11 +58,7 @@ To the top section of your job-script, add
 (using `-P` like this will cause the job to run on the rse queue if it is available,
 otherwise it will run on the general queue)
 
-On `iceberg` Hide Lab rents a node, which means that we get exclusive access to it.
-
-To run jobs on the hidelab node use `-P hidelab`in the job parameters.
-
-It's `-P hidelab` on `iceberg` and `-P rse` on `sharc`. Sorry.
+On `iceberg` Hide Lab used to rent a node which we could access using `-P hidelab`, but we stopped renting the node in May 2018.
 
 ## What jobs do I have?
 
