@@ -100,7 +100,7 @@ It's available on `sharc` (and `iceberg`) in
     
 This is some sort of magic automount directory, so it doesn't appear in `ls` and so on until you explcitly `cd` to it or use it.
 
-More information about the difference sorts of storage is available on the [official iceberg filestore page](http://docs.hpc.shef.ac.uk/en/latest/iceberg/filestore.html).
+More information about the difference sorts of storage is available on the [official HPC filestore page](http://docs.hpc.shef.ac.uk/en/latest/hpc/filestore.html).
 
 You can see if you're using lots of storage with:
 
