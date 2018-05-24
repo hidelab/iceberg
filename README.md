@@ -70,7 +70,7 @@ This list also includes interactive shell sessions (such as started with `qrshx`
 
 ## What jobs are running on the RSE nodes
 
-You can inspect a queue (`rse.q` in the _queue_ for the `rse` _project_) like this:
+You can inspect a queue (`rse.q` is the _queue_ for the `rse` _project_) like this:
 
 On `sharc`
 
